@@ -25,10 +25,10 @@ export default function VerifyPanPage() {
             <Input 
               id="pan" 
               type="text" 
-              placeholder="ABCDE1234F" 
+              placeholder="Enter any number" 
               required 
               className="uppercase"
-              pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
+              pattern="[0-9]*"
               title="Enter a valid PAN number"
             />
           </div>
