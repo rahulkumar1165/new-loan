@@ -164,9 +164,14 @@ export default function VideoVerificationClient() {
             </div>
             <div className="mt-6">
                 {status === 'idle' ? (
-                  <Button onClick={handleStartCountdown} disabled={!stream || countdown !== null} className="w-full">
-                    <Camera className="mr-2 h-4 w-4" /> Start Recording
-                  </Button>
+                  <div className="space-y-2">
+                    <Button onClick={handleStartCountdown} disabled={!stream || countdown !== null} className="w-full">
+                      <Camera className="mr-2 h-4 w-4" /> Start Recording
+                    </Button>
+                    <Button onClick={() => router.push('/success')} variant="outline" className="w-full">
+                      Skip for now
+                    </Button>
+                  </div>
                 ) : (
                   <Button onClick={handleStopRecording} variant="destructive" className="w-full">
                     <VideoOff className="mr-2 h-4 w-4" /> Stop Recording
