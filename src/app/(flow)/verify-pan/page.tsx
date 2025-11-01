@@ -17,7 +17,7 @@ export default function VerifyPanPage() {
       <div className="flex-1">
         <h2 className="font-headline text-2xl font-bold tracking-tight">PAN Verification</h2>
         <p className="mt-2 text-muted-foreground">
-          Please enter your PAN card number for verification.
+          Enter your PAN card number to continue. This is optional.
         </p>
         <form onSubmit={handleSubmit} className="mt-8 space-y-6">
           <div className="space-y-2">
@@ -26,10 +26,7 @@ export default function VerifyPanPage() {
               id="pan" 
               type="text" 
               placeholder="Enter PAN card" 
-              required 
               className="uppercase"
-              pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
-              title="Enter a valid PAN number"
             />
           </div>
           <Button type="submit" className="w-full">Verify & Continue</Button>
